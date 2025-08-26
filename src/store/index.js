@@ -14,8 +14,8 @@ export default createStore({
           ]
         },
         {
-          name: "Bob",
-          image:"https://ca.slack-edge.com/T02LW4RMXJQ-U05SH6EC6DN-983198ea2475-512",
+          name: "Phatshimo",
+          image:"https://matthew-dean-brown.github.io/skillswap-demo/public/img/phatshimo.jpg",
           skills: ["Python", "Django"],
           contact: { email: "bob@example.com", phone: "+27 (78)-987-6543" },
           reviews: []
@@ -38,8 +38,8 @@ export default createStore({
             { name: "Ethan", review: "Knows backend systems well", rating: 4 }
           ]
         },
-        {
-          name: "Ethan",
+        {image:"",
+          name: "Matthew",
           skills: ["React", "Node.js"],
           contact: { email: "ethan@example.com", phone: "+27 (82)-555-1212" },
           reviews: []
