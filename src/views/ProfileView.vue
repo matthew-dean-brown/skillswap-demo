@@ -19,7 +19,6 @@
         Update Profile
       </router-link>
     </nav>
-
     <!-- Update Profile Card -->
     <section v-if="updateProfile" class="card">
       <h2>Your Profile</h2>
@@ -140,6 +139,10 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    // Read from query
+    this.updateProfile = this.$route.query.updateProfile === 'true'
   },
   computed: {
     filteredBadges() {

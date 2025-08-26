@@ -11,7 +11,7 @@
         <router-link to="/">Dashboard</router-link> |
         <router-link to="/micro">Micro lessons</router-link> |
         <router-link to="/profile">Profile</router-link> |
-        <router-link to="/login">Login/Register</router-link> 
+        <router-link to="/login">Login</router-link> 
       </ul>
     </div>
   </nav>

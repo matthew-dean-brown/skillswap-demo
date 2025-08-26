@@ -11,8 +11,8 @@
       <nav class="links">
         <router-link to="/">Dashboard</router-link>
         <router-link to="/micro-lessons">Micro lessons</router-link>
-        <router-link to="/profile">Badges</router-link>
-        <router-link to="/profile">Profile</router-link>
+        <router-link :to="{ name: 'profile', query: { updateProfile: 'false'} }">Badges</router-link>
+        <router-link :to="{ name: 'profile', query: { updateProfile: 'true'} }">Profile</router-link>
       </nav>
 
       <!-- Actions / social -->
