@@ -141,11 +141,18 @@ export default {
 .search-btn { padding:8px 18px; border-radius:20px; border:none; background:#5a35f3; color:#fff; cursor:pointer; box-shadow:2px 2px 5px rgba(0,0,0,.2); }
 
 /* ====== grid ====== */
-.card-grid { display:grid; gap:24px; padding:20px 0; grid-template-columns:1fr; }
+
 @media (min-width:480px){ .card-grid{ grid-template-columns:repeat(2,1fr);} }
 @media (min-width:768px){ .card-grid{ grid-template-columns:repeat(3,1fr);} }
 @media (min-width:1024px){ .card-grid{ grid-template-columns:repeat(4,1fr);} }
-@media (min-width:1280px){ .card-grid{ grid-template-columns:repeat(5,1fr);} }
+@media (min-width:1280px){ .card-grid {
+  display: grid;
+  gap: 50px;
+  padding: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+}}
 
 /* ====== card ====== */
 .lesson-card {

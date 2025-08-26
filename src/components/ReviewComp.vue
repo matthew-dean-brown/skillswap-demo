@@ -69,7 +69,8 @@ export default {
     margin: 20px auto;
     padding: 24px;
     width: min(900px, 92vw);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .15)
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    min-height:70vh ;
 }
 
 /* Toolbar */
