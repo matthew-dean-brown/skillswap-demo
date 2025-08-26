@@ -9,10 +9,9 @@
       <!-- Right side -->
       <ul class="nav-links">
         <router-link to="/">Dashboard</router-link> |
-        <router-link to="/about">Micro lessons</router-link> |
-        <router-link to="/about">Profile</router-link> |
-        <router-link to="/about">Login/Register</router-link> 
-
+        <router-link to="/micro">Micro lessons</router-link> |
+        <router-link to="/profile">Profile</router-link> |
+        <router-link to="/login">Login/Register</router-link> 
       </ul>
     </div>
   </nav>
