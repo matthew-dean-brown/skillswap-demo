@@ -4,8 +4,8 @@ export default createStore({
   state: {
     users: [
         {
-          image:"https://ca.slack-edge.com/T02LW4RMXJQ-U08FVNDDHNE-8e777a4d53b3-512",
-          name: "Alice",
+          image:"https://matthew-dean-brown.github.io/skillswap-demo/public/img/jaimy.jpg",
+          name: "Jaimy",
           skills: ["Vue", "JavaScript"],
           contact: { email: "alice@example.com", phone: "+27 (55)-123-4567" },
           reviews: [
@@ -21,7 +21,8 @@ export default createStore({
           reviews: []
         },
         {
-          name: "Charlie",
+          image:"https://matthew-dean-brown.github.io/skillswap-demo/public/img/kenny.jpg",
+          name: "Kenny",
           skills: ["UI/UX", "Figma"],
           contact: { email: "charlie@example.com", phone: "+27 (82)-222-1111" },
           reviews: [
@@ -29,7 +30,8 @@ export default createStore({
           ]
         },
         {
-          name: "Diana",
+          image:"https://matthew-dean-brown.github.io/skillswap-demo/public/img/pia.jpg",
+          name: "Pia",
           skills: ["C#", ".NET"],
           contact: { email: "diana@example.com", phone: "+27 (60)-333-4444" },
           reviews: [

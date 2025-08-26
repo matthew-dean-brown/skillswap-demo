@@ -96,6 +96,7 @@ export default {
   border-radius: 50%;
   background: white;
   margin: 0 auto 10px;
+  object-fit: cover;
 }
 
 .card-actions {
