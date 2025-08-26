@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/DashboardView.vue'
+import DashboardView from '../views/DashboardView.vue'
+import ReviewComp from '@/components/ReviewComp.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'dashboard',
+    component: DashboardView
+  },
+  {
+    path: '/:index',
+    name: 'dashboardIndex',
+    component: ReviewComp,
+    props:true
   },
   {
     path: '/micro',
@@ -22,6 +29,7 @@ const routes = [
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/LoginRegisterView.vue')
   },
+  
 ]
 
 const router = createRouter({
