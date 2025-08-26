@@ -1,5 +1,51 @@
+<script>
+export default{
+    data(){
+        return{
+            login:false
+        }
+    }
+}
+</script>
 <template>
-  <div class="signup-wrap">
+    <div v-if="login" class="auth-wrap">
+    <form class="card" @submit.prevent>
+      <h1>Login</h1>
+
+      <!-- Email -->
+      <label class="label" for="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required
+      />
+
+      <!-- Password -->
+      <label class="label" for="password">Password:</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="••••••••"
+        autocomplete="current-password"
+        required
+      />
+
+      <p class="aux">
+        <router-link to="/forgot-password">Forgot password?</router-link>
+      </p>
+
+      <!-- Submit -->
+      <button class="btn" type="submit">Login</button>
+
+      <p class="foot">
+        Don’t have an account?
+        <router-link :to="$route.fullPath" @click="login= !login">Sign up here</router-link>
+      </p>
+    </form>
+  </div>
+  <div v-else class="signup-wrap">
     <form class="card" @submit.prevent>
       <h1>Create Account</h1>
 
@@ -38,7 +84,7 @@
         <input type="checkbox" required />
         <span>
           I agree that I have read the
-          <a href="/terms" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+          <a href="#" target="_blank" rel="noopener">Terms &amp; Conditions</a>
         </span>
       </label>
 
@@ -49,14 +95,14 @@
 
       <p class="foot">
         Already have an account?
-        <router-link to="/login">Login</router-link>
+        <router-link :to="$route.fullPath" @click="login = !login">Login</router-link>
       </p>
     </form>
   </div>
 </template>
 
 <style scoped>
-.signup-wrap {
+.signup-wrap, .auth-wrap {
   display: grid;
   place-items: center;
   min-height: calc(100vh - 80px); /* leave space for navbar */
@@ -82,6 +128,7 @@ h1 {
   display: block;
   margin-top: 1rem;
   font-weight: 600;
+  float: left;
 }
 
 input[type="email"],
@@ -107,11 +154,12 @@ input[type="password"] {
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
-  background: #333;
+  background: #5a35f3;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
   margin-top: 0.5rem;
+  transition: 1s;
 }
 
 .btn:hover {
@@ -122,5 +170,8 @@ input[type="password"] {
   margin-top: 1.5rem;
   text-align: center;
   font-size: 0.9rem;
+}
+a:visited{
+  color: #5a35f3
 }
 </style>

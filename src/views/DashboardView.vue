@@ -44,12 +44,19 @@ export default {
 }
 </script>
 <style>
-/* SEARCH BAR */
+/* LAYOUT CONTAINER (optional but nice) */
+.home {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* SEARCH BAR (unchanged) */
 .search-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 20px 0;
   gap: 10px;
 }
 
@@ -72,48 +79,64 @@ export default {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* CARDS */
+/* CARDS GRID */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
+  gap: 24px;
+  padding: 20px 0;
+  grid-template-columns: 1fr;                 /* mobile default: 1 per row */
+  justify-items: stretch;                      /* make each card fill its grid cell */
+  align-items: stretch;
 }
 
+/* Breakpoints for even spacing */
+@media (min-width: 480px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }  /* small phones/tablets */
+}
+@media (min-width: 768px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }  /* tablets */
+}
+@media (min-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(4, 1fr); }  /* laptops */
+}
+@media (min-width: 1280px) {
+  .card-grid { grid-template-columns: repeat(5, 1fr); }  /* large laptop/desktop -> exactly 5 */
+}
+
+/* CARD */
 .profile-card {
   background: #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  width: 200px;
-  text-align: left;
+  padding: 16px;
+  border-radius: 10px;
+  width: 210px;  /* REMOVE fixed width so grid can size evenly */
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;                 /* make equal height look tidy */
+  flex-direction: column;
+  gap: 8px;
 }
 
-.avatar,img {
+/* Avatar — fix selector to avoid styling all <img> globally */
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.avatar img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background: white;
-  margin: 0 auto 10px;
   object-fit: cover;
 }
 
+/* Actions */
 .card-actions {
+  margin-top: auto; /* pushes actions to bottom for equal-height cards */
   display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+  justify-content: center;
 }
 
-.btn {
-  border: none;
-  background: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-}
-.review{
+.review {
   padding: 8px 18px;
   border-radius: 20px;
   border: none;
@@ -121,11 +144,12 @@ export default {
   color: white;
   cursor: pointer;
   box-shadow: 2px 2px 5px rgba(118, 47, 47, 0.2);
-  transition: 1s;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
-.review:hover{
+.review:hover {
   background: #f5f5f5;
-  transition: 0.8s;
   color: black;
+  transform: translateY(-1px);
 }
+
 </style>

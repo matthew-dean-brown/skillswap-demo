@@ -38,21 +38,12 @@ export default createStore({
             { name: "Ethan", review: "Knows backend systems well", rating: 4 }
           ]
         },
-        {image:"",
+        {image:"https://matthew-dean-brown.github.io/skillswap-demo/public/img/matthew.png",
           name: "Matthew",
           skills: ["React", "Node.js"],
           contact: { email: "ethan@example.com", phone: "+27 (82)-555-1212" },
           reviews: []
-        },
-        {
-          name: "Fiona",
-          skills: ["SQL", "Data Analysis"],
-          contact: { email: "fiona@example.com", phone: "+27 (79)-777-8888" },
-          reviews: [
-            { name: "Liam", review: "Helped me understand queries better", rating: 5 },
-            { name: "Olivia", review: "Great with database optimization", rating: 4 }
-          ]
-        },
+        }
       ],
   },
   getters: {
