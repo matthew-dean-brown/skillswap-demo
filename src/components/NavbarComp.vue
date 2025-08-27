@@ -3,6 +3,7 @@
     <div class="nav-container">
       <!-- Left side -->
       <div id="logo">
+        <img src="@/assets/logo.png" alt="">
         Skill Swap
       </div>
 
@@ -24,6 +25,9 @@ export default {
 </script>
 
 <style scoped>
+img{
+  width: 30px;
+}
 /* NAV BAR STYLES */
 #navbar {
   background-color: #5a35f3; /* same purple as screenshot */
