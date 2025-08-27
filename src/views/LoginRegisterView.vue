@@ -105,7 +105,7 @@ export default{
 .signup-wrap, .auth-wrap {
   display: grid;
   place-items: center;
-  min-height:60vh ; /* leave space for navbar */
+  min-height:65vh ; /* leave space for navbar */
   padding: 2rem 1rem;
 }
 

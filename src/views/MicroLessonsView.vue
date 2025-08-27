@@ -135,7 +135,7 @@ export default {
 
 <style scoped>
 /* ====== container & search (reuse your styles) ====== */
-.home { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+.home { max-width: 1280px; margin: 0 auto; padding: 0 16px; min-height: 73vh;}
 .search-section { display:flex; justify-content:center; align-items:center; margin:20px 0; gap:10px; }
 .search-input { width:300px; padding:10px 15px; border-radius:20px; border:1px solid #ccc; box-shadow:2px 2px 5px rgba(0,0,0,.15); outline:none; }
 .search-btn { padding:8px 18px; border-radius:20px; border:none; background:#5a35f3; color:#fff; cursor:pointer; box-shadow:2px 2px 5px rgba(0,0,0,.2); }

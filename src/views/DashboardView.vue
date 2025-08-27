@@ -49,7 +49,7 @@ export default {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
-  min-height:70vh ;
+  min-height:73vh ;
 }
 
 /* SEARCH BAR (unchanged) */
