@@ -16,9 +16,12 @@
             </div>
 
             <div class="info-right">
-                <div class="row"><span class="label">Contact:</span></div>
+                <!-- <div class="row"><span class="label">Contact:</span></div>
                 <div class="contact-line"><a :href="'mailto:'+user?.contact?.email+'&subject=SkillSwap&body=I%20would%20like%20to%20enquire%20about%20your%20skill%20on%20SkillSwap target=_top'"><i class="fa fa-envelope"></i> {{ user?.contact?.email || '-' }}</a></div>
-                <div class="contact-line">{{ user?.contact?.phone || '-' }}</div>
+                <div class="contact-line">{{ user?.contact?.phone || '-' }}</div> -->
+                <div class="toolbar">
+            <router-link class="btn connect" :to="$route.fullPath">Connect</router-link>
+        </div>
             </div>
         </div>
 
@@ -63,6 +66,18 @@ export default {
 </script>
 
 <style scoped>
+.connect{
+     background: #5a35f3;   
+    color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+    transition: 0.5s;
+    margin-left: 100px;
+}
+.connect:hover {
+    transform: translateY(-1px);
+    background: white;
+    color: black;
+}
 .profile-wrap {
     background: #f6f7f8;
     border-radius: 12px;
